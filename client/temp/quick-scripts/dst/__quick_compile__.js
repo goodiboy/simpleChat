@@ -1,6 +1,6 @@
 
 (function () {
-var scripts = [{"deps":{"./assets/res/script/HttpUtils":2,"./assets/res/script/Item":1,"./assets/res/script/Main":3},"path":"preview-scripts/__qc_index__.js"},{"deps":{},"path":"preview-scripts/assets/res/script/Item.js"},{"deps":{},"path":"preview-scripts/assets/res/script/HttpUtils.js"},{"deps":{"./HttpUtils":2},"path":"preview-scripts/assets/res/script/Main.js"}];
+var scripts = [{"deps":{"./assets/res/script/Item":2,"./assets/res/script/HttpUtils":1,"./assets/res/script/Main":3},"path":"preview-scripts/__qc_index__.js"},{"deps":{},"path":"preview-scripts/assets/res/script/HttpUtils.js"},{"deps":{},"path":"preview-scripts/assets/res/script/Item.js"},{"deps":{"./HttpUtils":1},"path":"preview-scripts/assets/res/script/Main.js"}];
 var entries = ["preview-scripts/__qc_index__.js"];
 
 /**

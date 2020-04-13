@@ -25,19 +25,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var HttpUtils_1 = require("./HttpUtils");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
-var NewClass = /** @class */ (function (_super) {
-    __extends(NewClass, _super);
-    function NewClass() {
-        return _super !== null && _super.apply(this, arguments) || this;
+var Main = /** @class */ (function (_super) {
+    __extends(Main, _super);
+    function Main() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.msgItem = null;
+        _this.contentNode = null;
+        _this.editMsg = null;
+        return _this;
     }
-    NewClass.prototype.onLoad = function () {
+    Main.prototype.onLoad = function () {
+        var _this = this;
         HttpUtils_1.default.instance.init();
+        HttpUtils_1.default.instance.on('message', function (data) {
+            console.log(data);
+            _this.createMsgItem(data.msg);
+        });
     };
-    NewClass = __decorate([
+    Main.prototype.sendMsg = function () {
+        var msg = this.editMsg.string;
+        this.createMsgItem('我：' + msg);
+        HttpUtils_1.default.instance.emit('message', { msg: msg });
+    };
+    Main.prototype.createMsgItem = function (msg) {
+        var node = cc.instantiate(this.msgItem);
+        node.getComponent(cc.Label).string = msg;
+        node.parent = this.contentNode;
+    };
+    __decorate([
+        property(cc.Prefab)
+    ], Main.prototype, "msgItem", void 0);
+    __decorate([
+        property(cc.Node)
+    ], Main.prototype, "contentNode", void 0);
+    __decorate([
+        property(cc.Label)
+    ], Main.prototype, "editMsg", void 0);
+    Main = __decorate([
         ccclass
-    ], NewClass);
-    return NewClass;
+    ], Main);
+    return Main;
 }(cc.Component));
-exports.default = NewClass;
+exports.default = Main;
 
 cc._RF.pop();

@@ -58,8 +58,8 @@
     "_is3DNode": true,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "a04BlJeUVCj65SgXsLxPpZ",
-    "autoReleaseAssets": false
+    "autoReleaseAssets": false,
+    "_id": "72cd53a1-1fba-46c2-a984-2f590e6fcd3c"
   },
   {
     "__type__": "cc.Node",
@@ -88,13 +88,13 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 47
-      },
-      {
         "__id__": 48
       },
       {
         "__id__": 49
+      },
+      {
+        "__id__": 50
       }
     ],
     "_prefab": null,
@@ -184,7 +184,7 @@
       "array": [
         0,
         0,
-        413.9601430089617,
+        393.364976375213,
         0,
         0,
         0,
@@ -1435,8 +1435,8 @@
       }
     ],
     "_useOriginalSize": true,
-    "_string": "ccc",
-    "_N$string": "ccc",
+    "_string": "",
+    "_N$string": "",
     "_fontSize": 60,
     "_lineHeight": 62,
     "_enableWrapText": false,
@@ -1962,7 +1962,11 @@
     "_grayMaterial": null,
     "duration": 0.1,
     "zoomScale": 1.2,
-    "clickEvents": [],
+    "clickEvents": [
+      {
+        "__id__": 47
+      }
+    ],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
     "_N$transition": 2,
@@ -2033,6 +2037,16 @@
     "_id": "a75u3YtKBEMoTJqvN6s/YC"
   },
   {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 2
+    },
+    "component": "",
+    "_componentId": "3b44dGvemRMXb+Fh2Wef36B",
+    "handler": "sendMsg",
+    "customEventData": ""
+  },
+  {
     "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 0,
@@ -2084,6 +2098,15 @@
       "__id__": 2
     },
     "_enabled": true,
+    "msgItem": {
+      "__uuid__": "576ab7ac-30dd-43a9-a974-122031de0fed"
+    },
+    "contentNode": {
+      "__id__": 14
+    },
+    "editMsg": {
+      "__id__": 33
+    },
     "_id": "6crKkfep9KgoTOPoyoPPzb"
   }
 ]
